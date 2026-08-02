@@ -51,7 +51,7 @@ REQUIRED = [
     "unidecode",
     "phonemizer",
     "torchlibrosa>=0.0.9",
-    "transformers==4.30.2",
+    "transformers==5.5.0",
     "huggingface_hub",
     "progressbar",
     "ftfy",
