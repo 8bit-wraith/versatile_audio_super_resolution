@@ -11,7 +11,8 @@ def inference(audio_file, model_name, guidance_scale, ddim_steps):
         ddim_steps=ddim_steps
     )
     
-    return (44100, waveform)
+    # AudioSR returns [batch, channel, samples]; this demo processes one mono file.
+    return (audiosr.sampling_rate, waveform[0, 0])
 
 iface = gr.Interface(
     fn=inference, 
